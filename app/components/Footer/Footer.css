@@ -1,0 +1,44 @@
+/*===================
+   { section Design Footer } 
+   ===================*/
+Footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 50px;
+}
+
+Footer ul {
+  display: flex;
+  gap: 2rem;
+}
+Footer ul li a {
+  color: var(--title);
+  font-size: 0.7rem;
+  opacity: 0.7;
+}
+Footer ul li a:hover {
+  color: var(--bluee);
+  opacity: 1;
+}
+Footer p {
+  color: var(--subTitle);
+}
+/*===================
+     { Media Query Section } 
+     ===================*/
+@media (max-width: 768px) {
+  Footer {
+    flex-direction: column;
+  }
+  Footer p {
+    text-align: center;
+    width: 100%;
+    margin-top: 2rem;
+    margin-right: 2rem;
+    font-size: 14px;
+  }
+}
+/*===================
+       { End } 
+       ===================*/

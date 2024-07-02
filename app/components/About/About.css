@@ -1,0 +1,54 @@
+/* About Us Section */
+.about-section {
+  padding: 4em 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.about-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--title);
+}
+
+.about-section p {
+  line-height: 1.8;
+  color: var(--subTitle);
+  font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+  .about-section {
+    padding: 3em 1.5em;
+  }
+
+  .about-section h2 {
+    font-size: 2rem;
+  }
+
+  .about-section p {
+    font-size: 0.875rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-section {
+    padding: 2em 1em;
+  }
+
+  .about-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .about-section p {
+    font-size: 0.75rem;
+  }
+}

@@ -1,0 +1,302 @@
+/*===================
+ { section Design MAIN } 
+ ===================*/
+section {
+  display: flex;
+  align-items: start !important;
+  justify-content: start;
+  gap: 3rem;
+}
+/*=======================
+   { section left button } 
+   ========================*/
+section .section-left {
+  display: flex;
+  flex-direction: column;
+}
+section .section-left button {
+  background: rgb(31, 32, 48);
+  width: 150px;
+  margin-bottom: 0.5rem;
+  padding: 12px 20px;
+  text-align: center;
+  border-radius: 5px;
+  text-transform: uppercase;
+  letter-spacing: 0.05rem;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s, transform 0.3s;
+  border: 2px solid transparent;
+  color: #fff;
+  opacity: 0.5;
+}
+
+section .section-left button:hover {
+  background: #00bfff;
+  border-color: #00bfff;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+section .section-left button.active {
+  opacity: 1 !important;
+  border-color: #00bfff;
+  color: #fff;
+  transform: translateY(-2px);
+  font-weight: 600;
+  box-shadow: 2px 5px 5px #00bfff32;
+}
+/*===================
+   { section right } 
+   ===================*/
+section .section-right {
+  flex-grow: 1;
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+/*============
+   { Card } 
+   ============*/
+section .section-right .card {
+  width: 266px;
+  border: solid 1px var(--bluee);
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(34, 189, 150, 0.285);
+  transition: 0.3s;
+  .element {
+    background: linear-gradient(to right, rgb(36, 36, 36), rgb(10, 10, 10));
+  }
+
+  .element.light {
+    background: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0.8),
+      rgba(255, 255, 255, 0.3)
+    );
+  }
+}
+section .section-right .card:hover {
+  box-shadow: 0 0 15px rgba(34, 189, 150, 0.658);
+  transform: rotate(2.5deg);
+  scale: 1.1;
+}
+section .section-right .card img {
+  width: 100%;
+  border-radius: 5px;
+}
+.title-card {
+  text-transform: capitalize;
+  color: var(--bluee) !important;
+}
+section .section-right .card h2 {
+  margin: 15px 0;
+  color: var(--title);
+}
+section .section-right .card .contant {
+  padding: 15px;
+}
+section .section-right .card .text {
+  margin-bottom: 15px;
+  color: var(--subTitle);
+  font-size: 14px;
+}
+section .section-right .card .box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+section .section-right .card .box .bm-1 {
+  display: flex;
+  transition: 0.3s;
+}
+section .section-right .card .box .bm-1 p {
+  margin-left: 10px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.icon-github {
+  color: var(--bluee) !important;
+}
+.icon-link {
+  color: var(--bluee) !important;
+}
+section .section-right .card .box .bm-1 p:hover {
+  scale: 1.2 !important;
+}
+section .section-right .card .box .bm-2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+}
+section .section-right .card .box .bm-2:hover {
+  scale: 1.2;
+}
+section .section-right .card .box .bm-2 p {
+  color: var(--bluee);
+  cursor: pointer;
+}
+section .section-right .card .box .bm-2 span {
+  color: var(--bluee);
+}
+
+.model {
+  position: fixed;
+  background: rgba(30, 30, 38, 0.865);
+  inset: 0;
+  z-index: 555;
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card-model {
+  animation: modelAnim 0.7s 1;
+  background: var(--bgHeader);
+  width: 70%;
+  border-radius: 20px;
+  display: flex;
+}
+
+.img-model {
+  width: 400px;
+  border-radius: 20px;
+  height: 100%;
+  box-shadow: 3px 3px 5px var(--subTitle);
+}
+@keyframes modelAnim {
+  0% {
+    transform: scale(0);
+  }
+  60% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.s-r {
+  width: 100%;
+}
+.title-model {
+  text-align: center;
+  font-size: 40px;
+  color: var(--title);
+  margin-bottom: 1rem;
+}
+.text-model {
+  text-align: start;
+  margin-bottom: 1rem;
+  width: 80%;
+  margin-left: 20px;
+  color: var(--subTitle);
+}
+
+.box-model {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+.box-model .bm-1 {
+  display: flex;
+  transition: 0.3s;
+}
+.box-model .bm-1 p {
+  margin-left: 10px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.box-model .bm-2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+}
+
+.box-model .bm-2 p {
+  color: var(--bluee);
+  cursor: pointer;
+}
+.box-model .bm-2 span {
+  color: var(--bluee);
+}
+
+.exit-button {
+  padding: 4px 30px;
+  margin: 15px 0;
+  background-color: #ff6347; /* لون خلفية الزر */
+  color: #fff; /* لون النص */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.exit-button:hover {
+  background-color: #d23f2b; /* تغيير لون الخلفية عند تحويل الماوس */
+}
+/*============
+   { end } 
+   ============*/
+
+/*===================
+   { media phone } 
+   ====================*/
+
+@media (max-width: 600px) {
+  section {
+    flex-direction: column;
+  }
+  section .section-left {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1;
+    justify-content: center;
+  }
+  section .section-left button {
+    background: rgb(31, 32, 48);
+    width: 80px;
+    padding: 5px 5px;
+    font-size: 14px;
+    margin-left: 1rem;
+  }
+  section .section-right {
+    justify-content: center;
+  }
+  section .section-right .card {
+    width: 300px;
+  }
+}
+
+/*===================
+   { media tablit } 
+   ====================*/
+@media (max-width: 1000px) {
+  section {
+    flex-direction: column;
+  }
+  section .section-left {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1;
+    justify-content: center;
+  }
+  section .section-left button {
+    background: rgb(31, 32, 48);
+    width: 80px;
+    padding: 5px 5px;
+    font-size: 14px;
+    margin-left: 1rem;
+  }
+  section .section-right {
+    justify-content: center;
+  }
+  .bm-2 {
+    display: none !important;
+  }
+}
+/*============
+   { end } 
+   ============*/

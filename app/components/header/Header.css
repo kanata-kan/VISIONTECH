@@ -1,0 +1,123 @@
+/* Table of Contents */
+/*===================  { Header Design }  ===================*/
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+  padding: 0 20px;
+}
+header nav {
+  background: var(--bgHeader);
+  padding: 0.7rem 1rem;
+  border-radius: 50px;
+  box-shadow: 1px 1px 40px rgba(0, 0, 0, 0.338);
+}
+header nav ul {
+  display: flex;
+  gap: 2rem;
+}
+header nav ul li a {
+  color: var(--title);
+  font-size: 0.7rem;
+  opacity: 0.7;
+  font-weight: 500;
+}
+header nav ul li a:hover {
+  color: var(--bluee);
+  opacity: 1;
+}
+.menu {
+  visibility: hidden;
+  margin: 20px;
+  color: var(--subTitle) !important;
+}
+/*===================
+   { Model Section } 
+   ===================*/
+.fixed {
+  position: fixed;
+  background: rgba(30, 30, 38, 0.865);
+  inset: 0;
+  z-index: 555;
+  backdrop-filter: blur(10px);
+}
+@keyframes modelAnim {
+  0% {
+    transform: scale(0);
+  }
+  60% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+header div.fixed ul {
+  animation: modelAnim 0.7s 1;
+  background: var(--bgHeader);
+  margin: 50px auto 0;
+  width: 90%;
+  padding: 10px;
+  border-radius: 20px;
+}
+header div.fixed ul li {
+  border-bottom: solid 1px var(--border);
+  padding: 1rem 0;
+}
+header div.fixed ul li:first-child {
+  padding: 10px 10px 0;
+  border-bottom: none;
+  text-align: end;
+  margin-bottom: -2rem;
+}
+header div.fixed ul li:last-child {
+  border-bottom: none;
+}
+
+header div.fixed ul li a {
+  color: var(--title);
+}
+/*===================
+   { Icons Section } 
+   ===================*/
+.mood {
+  background: var(--bgHeader);
+  color: var(--gold);
+  width: 40px;
+  height: 40px;
+  font-size: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: solid 1px var(--gold);
+}
+.mood:hover {
+  border-color: rgb(255, 217, 0);
+  transition: 0.2s;
+}
+.icon-clos {
+  font-size: 1.5rem;
+  color: var(--title);
+}
+.icon-clos:hover {
+  font-size: 1.6rem;
+  transition: 0.3s ease;
+  transform: rotate(180deg);
+  color: brown;
+}
+/*===================
+   { Media Query Section } 
+   ===================*/
+@media (max-width: 768px) {
+  header nav {
+    display: none;
+  }
+  .menu {
+    visibility: visible;
+  }
+}
+/*===================
+   { End } 
+   ===================*/

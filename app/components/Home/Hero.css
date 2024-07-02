@@ -1,0 +1,120 @@
+/* Table of Contents */
+
+/*=================== { section Design HERO } ===================*/
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/*=================== 
+  { section left }
+   ===================*/
+section .section-left {
+  flex-grow: 1;
+}
+section .section-left .img-icon {
+  display: flex;
+  align-items: end;
+  justify-content: start;
+}
+/*===================
+   { section left image }
+    ===================*/
+
+section .section-left .img-icon img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 3px solid var(--bluee);
+  box-shadow: 0px 4px 6px #3b3a3aa3;
+  transition: all 0.3s ease;
+}
+
+section .section-left .img-icon img:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 8px 12px #3b3a3aa3;
+}
+
+/*===================
+   { section left text }
+    ===================*/
+
+section .section-left h1 {
+  font-size: 50px;
+  margin-bottom: 2rem;
+  color: var(--title);
+}
+.section-left p {
+  line-height: 30px;
+  color: var(--subTitle);
+}
+/*===================
+   { section left icons } 
+   ===================*/
+.social-media-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Adjust the gap between icons as needed */
+  margin: 20px 0; /* Adjust the margin as needed */
+}
+
+.icon {
+  font-size: 2.5rem; /* Adjust the size of the icons as needed */
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.icon:hover {
+  transform: scale(1.2); /* Adjust the scale factor as needed */
+  color: #ff5722; /* Change to desired hover color */
+}
+
+.icon-twitter {
+  color: #1da1f2;
+}
+
+.icon-instagram {
+  color: #e4405f;
+}
+
+.icon-facebook {
+  color: #1877f2;
+}
+
+.icon-linkedin {
+  color: #0077b5;
+}
+
+/*===================
+   { section right } 
+   ===================*/
+
+/*.section-right {
+    background: #68008b;
+  }*/
+
+/*===================
+   { Media Query Section } 
+   ===================*/
+
+@media (max-width: 600px) {
+  section {
+    display: flex;
+    flex-direction: column;
+  }
+  section .section-left .img-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .section-left h1 {
+    font-size: 30px;
+    text-align: center;
+    margin-top: 20px;
+  }
+}
+@media (max-width: 1200px) {
+  .animation {
+    display: none;
+  }
+}
+/*=================== { End } ===================*/

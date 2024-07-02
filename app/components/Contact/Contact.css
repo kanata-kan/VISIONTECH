@@ -1,0 +1,193 @@
+/*==============================
+ { section Design CONTACT } 
+ ==============================*/
+section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+.content-left {
+  flex-grow: 1;
+  max-width: 600px;
+  margin-right: 20px;
+}
+/*==============================
+   { content > CONTACT } 
+   ==============================*/
+.content-left .contact {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.content-left .contact p {
+  font-size: 40px;
+  margin-right: 10px;
+}
+.content-left .contact .icon-mail {
+  color: var(--title);
+}
+.content-left .contact h2 {
+  font-size: 40px;
+  color: var(--title);
+}
+
+.content-left .text {
+  color: var(--subTitle);
+  margin-top: 1.5rem;
+}
+/*==============================
+   { content > FORM } 
+   ==============================*/
+.content-left form {
+  margin-top: 3rem;
+}
+.content-left form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: var(--subTitle);
+}
+
+.content-left form input,
+.content-left form textarea {
+  width: 90%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid var(--bluee);
+  border-radius: 5px;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+  background: initial;
+  color: var(--title);
+}
+
+.content-left form input:focus,
+.content-left form textarea:focus {
+  outline: none;
+  border-color: #00bfff;
+}
+
+.content-left form input:hover,
+.content-left form textarea:hover {
+  border-color: #7f7f7f;
+}
+/*==============================
+   { SUBMIT } 
+   ==============================*/
+.content-left form .btn-submit {
+  background: rgb(31, 32, 48);
+  width: 100px;
+  margin-bottom: 0.5rem;
+  padding: 12px 20px;
+  text-align: center;
+  border-radius: 5px;
+  text-transform: uppercase;
+  letter-spacing: 0.05rem;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s, transform 0.3s;
+  border: 2px solid transparent;
+  color: #fff;
+}
+.content-left form .btn-submit:hover {
+  background: #00bfff;
+  border-color: #00bfff;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.content-left .phone input:hover {
+  border-color: #7f7f7f;
+}
+/* تنسيقات لقسم معلومات الاتصال */
+.contact-info {
+  margin-top: 2rem;
+  padding: 1rem;
+  background-color: var(--bg);
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contact-info p {
+  margin-bottom: 0.5rem;
+  font-size: 18px;
+  color: var(--title);
+}
+
+/* تنسيقات لحقول الإدخال والزر في النموذج */
+.email,
+.message {
+  margin-bottom: 1.5rem;
+}
+
+.email label,
+.message label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #555;
+}
+
+.email input,
+.message textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+.email input:focus,
+.message textarea:focus {
+  outline: none;
+  border-color: #00bfff;
+}
+
+.email input:hover,
+.message textarea:hover {
+  border-color: #7f7f7f;
+}
+.content-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+/*==============================
+   { END } 
+   ==============================*/
+
+/*==============================
+   { media} 
+   ==============================*/
+@media (max-width: 768px) {
+  .content-left .contact p,
+  .content-left .contact h2 {
+    font-size: 30px;
+  }
+
+  .content-left form input,
+  .content-left form textarea {
+    width: 100%;
+  }
+
+  .content-left form .btn-submit {
+    width: 100%;
+  }
+
+  .social-media-icons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .icon {
+    font-size: 2rem;
+  }
+}
+/*==============================
+   { END } 
+   ==============================*/
