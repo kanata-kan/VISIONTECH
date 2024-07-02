@@ -79,7 +79,7 @@ export default function Contact() {
             <p>Address: Street Address, City, Country</p>
             <a href='https://wa.me/212652064823'>
               <Lottie
-                className='animation'
+                className=''
                 style={{ marginRight: 10, width: 100 }}
                 animationData={phone}
               />
